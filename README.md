@@ -1,14 +1,3 @@
-Hiểu rồi ✅. Ý bạn là muốn một **file README.md hoàn chỉnh** bao gồm:
-
-- Giới thiệu dự án (dataset, mục tiêu, ứng dụng)
-- Cấu trúc thư mục dự án
-- Công cụ sử dụng
-- Hướng dẫn cài đặt, chạy project
-- Hướng dẫn Git workflow (main → develop → feature/nhánh thành viên)
-- Phân công công việc
-
-Mình sẽ viết bản **chuẩn chuyên nghiệp**, bạn chỉ cần copy nguyên vào file `README.md`.
-
 ---
 
 # 📑 README.md (Bản hoàn chỉnh)
@@ -39,9 +28,10 @@ Bộ dữ liệu bao gồm các thông tin về:
 ---
 
 ## 📂 Cấu trúc thư mục
-```
 
-sleep-health-checker/
+````
+
+ sleep-health-checker/
 │
 ├── data/ # Dữ liệu
 │ ├── raw/ # Dữ liệu gốc (không chỉnh sửa)
@@ -82,11 +72,12 @@ sleep-health-checker/
 ├── requirements.txt # Thư viện Python
 └── environment.yml # Môi trường Conda (nếu dùng)
 
-````
+
 
 ---
 
 ## 🛠️ Công cụ sử dụng
+
 - **R**: tiền xử lý, phân tích, trực quan hóa dữ liệu.
 - **Python (scikit-learn, pandas, matplotlib, seaborn)**: học máy.
 - **Flask**: xây dựng ứng dụng web.
@@ -98,6 +89,7 @@ sleep-health-checker/
 ## 🚀 Cài đặt và chạy dự án
 
 1. Clone repo về máy:
+
 ```bash
 git clone https://github.com/<your-username>/sleep-health-checker.git
 cd sleep-health-checker
