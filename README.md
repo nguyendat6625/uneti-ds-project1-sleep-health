@@ -4,7 +4,10 @@
 
 ## 1. Giới thiệu
 Dự án phân tích dữ liệu sức khỏe giấc ngủ và lối sống, thực hiện theo mô hình làm việc nhóm chuyên nghiệp.  
-Mục tiêu của file `README.md` này: hướng dẫn **cài đặt môi trường**, **quy trình làm việc với Git**, và **quy tắc commit/push/merge** để đảm bảo dự án diễn ra trơn tru, không xung đột.
+
+Mục tiêu của file `README.md` này là hướng dẫn nhóm cách:
+- Sử dụng Git trong quá trình phát triển dự án
+- Quy tắc commit, push và merge để tránh xung đột code
 
 ---
 
