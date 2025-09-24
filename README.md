@@ -24,8 +24,9 @@ Chúng ta sẽ tuân thủ mô hình **Git Flow đơn giản** để quản lý 
 graph TD;
     A[main] --> B[develop];
     B --> C[feature/A-lamsachdulieu];
-    B --> D[feature/B-trucquanhoa];
-    B --> E[feature/C-thongke];
+    B --> C[feature/B-lamsachdulieu];
+    B --> D[feature/C-trucquanhoa];
+    B --> E[feature/D-thongke];
 ```
 
 ---
