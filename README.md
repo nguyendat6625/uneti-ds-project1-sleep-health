@@ -32,8 +32,10 @@ main
 ### Bước 1: Clone dự án về máy
 
 ```bash
-git clone <link_repo>
-cd <ten_repo>
+#Tạo folder đồ án trên máy tính(ví dụ: uneti-projects)
+git init
+git clone https://github.com/nguyendat6625/uneti-ds-project1-sleep-health.git
+cd uneti-ds-project1-sleep-health
 ```
 
 ### Bước 2: Checkout nhánh cá nhân
@@ -45,6 +47,9 @@ git pull origin develop
 
 # Tạo nhánh cá nhân từ develop
 git checkout -b feature/<ten-thanh-vien>-<nhiem-vu>
+#Ví dụ:
+git checkout -b feature/dat-trucquanhoa
+
 ```
 
 ### Bước 3: Làm việc và commit
@@ -68,6 +73,8 @@ git commit -m "feat: thêm biểu đồ histogram cho Sleep Duration"
 
 ```bash
 git push origin feature/<ten-thanh-vien>-<nhiem-vu>
+#Ví dụ:
+git push origin feature/dat-trucquanhoa
 ```
 
 ### Bước 5: Tạo Pull Request (PR)
