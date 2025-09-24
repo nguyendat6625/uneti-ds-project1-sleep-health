@@ -1,0 +1,17 @@
+# Ignore R & Python cache
+.Rhistory
+.RData
+.Rproj.user/
+.ipynb_checkpoints/
+__pycache__/
+
+# Ignore raw data (too large for Git)
+data/raw/*
+!data/raw/README.md
+
+# Ignore processed large CSV
+data/processed/*.csv
+
+# OS files
+.DS_Store
+Thumbs.db

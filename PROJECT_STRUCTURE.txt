@@ -1,0 +1,24 @@
+📂 Cấu trúc dự án:
+
+- data/raw/         : Dữ liệu gốc, không chỉnh sửa
+- data/processed/   : Dữ liệu đã làm sạch, sẵn sàng phân tích
+- data/external/    : Dữ liệu bổ sung từ nguồn ngoài
+
+- notebooks/EDA_R/      : Notebook EDA bằng R
+- notebooks/EDA_Python/ : Notebook EDA bằng Python
+
+- src/preprocessing/ : Code xử lý dữ liệu
+- src/visualization/ : Code trực quan hóa
+- src/modeling/      : Code huấn luyện mô hình ML
+    ├── R/           : Mô hình viết bằng R
+    └── python/      : Mô hình viết bằng Python
+- src/model_testing/ : Đánh giá mô hình
+
+
+- reports/paper/     : Báo cáo Word/PDF
+- reports/slides/    : Slide thuyết trình
+
+- tests/             : Unit tests
+- .gitignore         : Bỏ qua file không cần push lên Git
+- README.md          : Giới thiệu dự án
+- PROJECT_STRUCTURE.txt : Giải thích ý nghĩa các thư mục
