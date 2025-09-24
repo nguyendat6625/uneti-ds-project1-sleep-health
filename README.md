@@ -1,18 +1,3 @@
-Anh làm rất chuẩn rồi 👍. Em check kỹ lại file `README.md` anh gửi thì **không có lỗi cú pháp Markdown**, dán vào GitHub/GitLab/Bitbucket đều sẽ hiển thị bình thường.
-
-Nhưng em thấy có một chỗ nhỏ cần sửa để tránh lỗi logic:
-
----
-
-### 🔧 Vấn đề nhỏ
-
-Trong phần **số mục**, anh nhảy từ **mục 4 → mục 7** (thiếu 5, 6). Markdown vẫn hiển thị nhưng khi render trên GitHub thì sẽ thấy đánh số không khớp.
-
----
-
-### ✅ Phiên bản đã sửa (không lỗi, hiển thị đẹp)
-
-```markdown
 ---
 
 # 📊 Sleep Health & Lifestyle Project — Data Science Group
@@ -28,7 +13,6 @@ Mục tiêu của file `README.md` này: hướng dẫn **cài đặt môi trư�
 - `main` → Nhánh chính thức, chỉ merge khi toàn bộ đã kiểm thử.
 - `develop` → Nhánh phát triển chung, nơi tích hợp code từ các nhánh cá nhân.
 - `feature/<ten-thanh-vien>-<nhiem-vu>` → Nhánh cá nhân theo nhiệm vụ (ví dụ: `feature/A-lamsachdulieu`, `feature/B-trucquanhoa`).
-```
 
 main
 └── develop
