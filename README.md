@@ -1,6 +1,20 @@
+Anh làm rất chuẩn rồi 👍. Em check kỹ lại file `README.md` anh gửi thì **không có lỗi cú pháp Markdown**, dán vào GitHub/GitLab/Bitbucket đều sẽ hiển thị bình thường.
+
+Nhưng em thấy có một chỗ nhỏ cần sửa để tránh lỗi logic:
+
 ---
 
-````markdown
+### 🔧 Vấn đề nhỏ
+
+Trong phần **số mục**, anh nhảy từ **mục 4 → mục 7** (thiếu 5, 6). Markdown vẫn hiển thị nhưng khi render trên GitHub thì sẽ thấy đánh số không khớp.
+
+---
+
+### ✅ Phiên bản đã sửa (không lỗi, hiển thị đẹp)
+
+```markdown
+---
+
 # 📊 Sleep Health & Lifestyle Project — Data Science Group
 
 ## 1. Giới thiệu
@@ -9,73 +23,32 @@ Mục tiêu của file `README.md` này: hướng dẫn **cài đặt môi trư�
 
 ---
 
-## 2. Yêu cầu môi trường
-
-- **Python 3.10+**
-- **Git** (cài đặt trên máy tính)
-- **Anaconda/Miniconda** (khuyến nghị) hoặc `venv`
-- Các thư viện chính:
-  - `pandas`, `numpy`, `matplotlib`, `seaborn`
-  - `scikit-learn`
-  - `jupyter` / `notebook`
-
----
-
-## 3. Hướng dẫn cài đặt môi trường
-
-### Cách 1: Sử dụng `conda`
-
-```bash
-# Tạo môi trường mới
-conda create -n sleep_env python=3.10 -y
-conda activate sleep_env
-
-# Cài đặt thư viện cần thiết
-pip install -r requirements.txt
-```
-
-### Cách 2: Sử dụng `venv`
-
-```bash
-# Tạo môi trường ảo
-python -m venv venv
-# Kích hoạt
-source venv/bin/activate   # Mac/Linux
-venv\Scripts\activate      # Windows
-
-# Cài đặt thư viện
-pip install -r requirements.txt
-```
-
-> **Lưu ý:** Mọi người chỉ chỉnh sửa và cập nhật file `requirements.txt` khi thêm thư viện mới, sau đó push lên repo để các thành viên khác đồng bộ.
-
----
-
-## 4. Cấu trúc nhánh Git
+## 2. Cấu trúc nhánh Git
 
 - `main` → Nhánh chính thức, chỉ merge khi toàn bộ đã kiểm thử.
 - `develop` → Nhánh phát triển chung, nơi tích hợp code từ các nhánh cá nhân.
-- `feature/<ten-thanh-vien>-<nhiem-vu>` → Nhánh cá nhân theo nhiệm vụ (ví dụ: `feature/A-EDA`, `feature/B-clean-data`).
-
+- `feature/<ten-thanh-vien>-<nhiem-vu>` → Nhánh cá nhân theo nhiệm vụ (ví dụ: `feature/A-lamsachdulieu`, `feature/B-trucquanhoa`).
 ```
+
 main
 └── develop
-    └── feature/A-EDA
-    └── feature/B-clean-data
-    └── feature/C-visualization
-    └── feature/D-ML
-```
+└── feature/A-lamsachdulieu
+└── feature/B-trucquanhoa
+└── feature/C-thongke
+└── feature/D-thuattoan
+
+````
 
 ---
 
-## 5. Quy trình làm việc chi tiết
+## 3. Quy trình làm việc chi tiết
 
 ### Bước 1: Clone dự án về máy
 
 ```bash
 git clone <link_repo>
 cd <ten_repo>
-```
+````
 
 ### Bước 2: Checkout nhánh cá nhân
 
@@ -127,7 +100,7 @@ git push origin feature/<ten-thanh-vien>-<nhiem-vu>
 
 ---
 
-## 6. Quy tắc đồng bộ để tránh xung đột
+## 4. Quy tắc đồng bộ để tránh xung đột
 
 1. **Luôn cập nhật develop trước khi code:**
 
@@ -150,7 +123,7 @@ git push origin feature/<ten-thanh-vien>-<nhiem-vu>
 
 ---
 
-## 7. Tips làm việc nhóm chuyên nghiệp
+## 5. Tips làm việc nhóm chuyên nghiệp
 
 - Họp Zoom định kỳ 3 lần/tuần (ngày 24, 27, 29/09, 20h00).
 - Check-in nhanh hàng ngày qua chat nhóm (22h00).
