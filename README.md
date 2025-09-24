@@ -1,14 +1,12 @@
 ---
-
 # 📊 Sleep Health & Lifestyle Project — Data Science Group
 
 ## 1. Giới thiệu
-Dự án phân tích dữ liệu sức khỏe giấc ngủ và lối sống, thực hiện theo mô hình làm việc nhóm chuyên nghiệp.  
-
-Mục tiêu của file `README.md` này là hướng dẫn nhóm cách:
+Dự án phân tích dữ liệu sức khỏe giấc ngủ và lối sống,
+thực hiện theo mô hình làm việc nhóm chuyên nghiệp.
+Mục tiêu của file `README.md` này là hướng dẫn nhóm cách
 - Sử dụng Git trong quá trình phát triển dự án
 - Quy tắc commit, push và merge để tránh xung đột code
-
 ---
 
 ## 2. Cấu trúc nhánh Git
@@ -17,6 +15,7 @@ Mục tiêu của file `README.md` này là hướng dẫn nhóm cách:
 - `develop` → Nhánh phát triển chung, nơi tích hợp code từ các nhánh cá nhân.
 - `feature/<ten-thanh-vien>-<nhiem-vu>` → Nhánh cá nhân theo nhiệm vụ (ví dụ: `feature/A-lamsachdulieu`, `feature/B-trucquanhoa`).
 
+```
 main
 └── develop
 └── feature/A-lamsachdulieu
@@ -24,7 +23,7 @@ main
 └── feature/C-thongke
 └── feature/D-thuattoan
 
-````
+```
 
 ---
 
@@ -35,7 +34,7 @@ main
 ```bash
 git clone <link_repo>
 cd <ten_repo>
-````
+```
 
 ### Bước 2: Checkout nhánh cá nhân
 
