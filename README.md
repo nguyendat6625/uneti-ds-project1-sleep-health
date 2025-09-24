@@ -1,195 +1,160 @@
 ---
 
-# 📑 README.md (Bản hoàn chỉnh)
+````markdown
+# 📊 Sleep Health & Lifestyle Project — Data Science Group
 
-```markdown
-# Sleep Health Checker 💤
-
-## 📌 Giới thiệu
-
-Dự án **Sleep Health Checker** được xây dựng dựa trên bộ dữ liệu  
-[Sleep Health and Lifestyle Dataset](https://www.kaggle.com/datasets/uom190346a/sleep-health-and-lifestyle-dataset).
-
-Bộ dữ liệu bao gồm các thông tin về:
-
-- Giới tính, tuổi, nghề nghiệp
-- Thời gian ngủ, chất lượng giấc ngủ
-- Mức độ hoạt động thể chất, stress
-- BMI, huyết áp, nhịp tim
-- Tình trạng rối loạn giấc ngủ (Insomnia, Apnea, None)
-
-### 🎯 Mục tiêu
-
-- Phân tích và trực quan hóa dữ liệu sức khỏe – lối sống.
-- Xác định các yếu tố ảnh hưởng đến chất lượng giấc ngủ.
-- Xây dựng mô hình học máy để dự đoán rối loạn giấc ngủ.
-- Phát triển ứng dụng Flask hỗ trợ chăm sóc sức khỏe cá nhân.
+## 1. Giới thiệu
+Dự án phân tích dữ liệu sức khỏe giấc ngủ và lối sống, thực hiện theo mô hình làm việc nhóm chuyên nghiệp.  
+Mục tiêu của file `README.md` này: hướng dẫn **cài đặt môi trường**, **quy trình làm việc với Git**, và **quy tắc commit/push/merge** để đảm bảo dự án diễn ra trơn tru, không xung đột.
 
 ---
 
-## 📂 Cấu trúc thư mục
+## 2. Yêu cầu môi trường
 
-````
-
- sleep-health-checker/
-│
-├── data/ # Dữ liệu
-│ ├── raw/ # Dữ liệu gốc (không chỉnh sửa)
-│ ├── processed/ # Dữ liệu đã xử lý
-│ └── external/ # Dữ liệu bổ sung (nếu có)
-│
-├── notebooks/ # Notebook EDA
-│ ├── EDA_R/ # EDA bằng R
-│ └── EDA_Python/ # EDA bằng Python
-│
-├── src/ # Code chính
-│ ├── preprocessing/ # Tiền xử lý dữ liệu
-│ ├── visualization/ # Trực quan hóa dữ liệu
-│ ├── modeling/ # Huấn luyện mô hình ML
-│ │ ├── R/
-│ │ └── python/
-│ ├── model_testing/ # Đánh giá mô hình
-│ ├── backend/ # Flask API
-│ │ ├── routes/
-│ │ ├── models/
-│ │ └── utils/
-│ └── frontend/ # Giao diện web (HTML, CSS, JS)
-│ ├── static/
-│ │ ├── css/
-│ │ ├── js/
-│ │ └── img/
-│ └── templates/
-│
-├── reports/ # Báo cáo & slide
-│ ├── paper/
-│ └── slides/
-│
-├── tests/ # Unit tests
-│
-├── .gitignore # File bỏ qua khi push Git
-├── README.md # File hướng dẫn (bạn đang đọc)
-├── PROJECT_STRUCTURE.txt # Giải thích ý nghĩa từng folder
-├── requirements.txt # Thư viện Python
-└── environment.yml # Môi trường Conda (nếu dùng)
-
-
+- **Python 3.10+**
+- **Git** (cài đặt trên máy tính)
+- **Anaconda/Miniconda** (khuyến nghị) hoặc `venv`
+- Các thư viện chính:
+  - `pandas`, `numpy`, `matplotlib`, `seaborn`
+  - `scikit-learn`
+  - `jupyter` / `notebook`
 
 ---
 
-## 🛠️ Công cụ sử dụng
+## 3. Hướng dẫn cài đặt môi trường
 
-- **R**: tiền xử lý, phân tích, trực quan hóa dữ liệu.
-- **Python (scikit-learn, pandas, matplotlib, seaborn)**: học máy.
-- **Flask**: xây dựng ứng dụng web.
-- **HTML, CSS, JS**: giao diện người dùng.
-- **Git & GitHub**: quản lý mã nguồn và cộng tác nhóm.
-
----
-
-## 🚀 Cài đặt và chạy dự án
-
-1. Clone repo về máy:
+### Cách 1: Sử dụng `conda`
 
 ```bash
-git clone https://github.com/<your-username>/sleep-health-checker.git
-cd sleep-health-checker
-````
+# Tạo môi trường mới
+conda create -n sleep_env python=3.10 -y
+conda activate sleep_env
 
-2. Tạo môi trường Python và cài thư viện:
-
-```bash
+# Cài đặt thư viện cần thiết
 pip install -r requirements.txt
 ```
 
-3. Chạy Flask app:
+### Cách 2: Sử dụng `venv`
 
 ```bash
-cd src/backend
-python app.py
+# Tạo môi trường ảo
+python -m venv venv
+# Kích hoạt
+source venv/bin/activate   # Mac/Linux
+venv\Scripts\activate      # Windows
+
+# Cài đặt thư viện
+pip install -r requirements.txt
+```
+
+> **Lưu ý:** Mọi người chỉ chỉnh sửa và cập nhật file `requirements.txt` khi thêm thư viện mới, sau đó push lên repo để các thành viên khác đồng bộ.
+
+---
+
+## 4. Cấu trúc nhánh Git
+
+- `main` → Nhánh chính thức, chỉ merge khi toàn bộ đã kiểm thử.
+- `develop` → Nhánh phát triển chung, nơi tích hợp code từ các nhánh cá nhân.
+- `feature/<ten-thanh-vien>-<nhiem-vu>` → Nhánh cá nhân theo nhiệm vụ (ví dụ: `feature/A-EDA`, `feature/B-clean-data`).
+
+```
+main
+└── develop
+    └── feature/A-EDA
+    └── feature/B-clean-data
+    └── feature/C-visualization
+    └── feature/D-ML
 ```
 
 ---
 
-## 🌳 Git Workflow (main → develop → feature)
+## 5. Quy trình làm việc chi tiết
 
-### Cấu trúc nhánh
-
-- **main** → chứa phiên bản ổn định (release).
-- **develop** → nhánh phát triển chung.
-- **feature/<ten-thanh-vien>** → nhánh cá nhân để code nhiệm vụ riêng.
-
-```mermaid
-graph TD;
-    A[main] --> B[develop]
-    B --> C[feature/A]
-    B --> D[feature/B]
-    B --> E[feature/C]
-    B --> F[feature/D]
-    B --> G[feature/E]
-```
-
----
-
-### Các bước làm việc
-
-#### 1. Lấy nhánh develop mới nhất
+### Bước 1: Clone dự án về máy
 
 ```bash
+git clone <link_repo>
+cd <ten_repo>
+```
+
+### Bước 2: Checkout nhánh cá nhân
+
+```bash
+# Luôn cập nhật develop mới nhất
 git checkout develop
 git pull origin develop
+
+# Tạo nhánh cá nhân từ develop
+git checkout -b feature/<ten-thanh-vien>-<nhiem-vu>
 ```
 
-#### 2. Tạo nhánh cá nhân
+### Bước 3: Làm việc và commit
 
-Ví dụ: thành viên An tạo nhánh `feature/an`:
+- Quy tắc commit: **ngắn gọn, rõ ràng, có prefix**
 
-```bash
-git checkout -b feature/an
-```
+  - `feat:` thêm chức năng
+  - `fix:` sửa lỗi
+  - `docs:` cập nhật tài liệu
+  - `refactor:` cải tiến code
+  - `test:` thêm kiểm thử
 
-#### 3. Commit code
+Ví dụ:
 
 ```bash
 git add .
-git commit -m "An: thêm code EDA"
+git commit -m "feat: thêm biểu đồ histogram cho Sleep Duration"
 ```
 
-#### 4. Push nhánh cá nhân
+### Bước 4: Push nhánh cá nhân
 
 ```bash
-git push origin feature/an
+git push origin feature/<ten-thanh-vien>-<nhiem-vu>
 ```
 
-#### 5. Tạo Pull Request (PR)
+### Bước 5: Tạo Pull Request (PR)
 
-- Lên GitHub → tạo **PR từ `feature/an` vào `develop`**.
-- Nhóm trưởng review → nếu OK thì merge.
+- Khi hoàn thành phần việc, tạo **Pull Request** (PR) từ nhánh cá nhân → `develop`.
+- Thành viên khác **review code**:
 
-#### 6. Merge vào `main`
+  - Kiểm tra lỗi
+  - Chạy thử notebook
+  - Đóng góp ý kiến
 
-- Chỉ nhóm trưởng merge `develop` → `main` khi có bản ổn định.
+### Bước 6: Merge vào `develop`
 
----
-
-## 📅 Quy định nhóm
-
-- Không commit trực tiếp vào `main`.
-- Trước khi code: luôn `git pull origin develop`.
-- Commit message rõ ràng, ví dụ:
-
-  - `"B: clean dữ liệu raw"`
-  - `"C: vẽ heatmap stress vs sleep"`
-
-- Mỗi người chịu trách nhiệm **1 module chính** (data, EDA, viz, ML, report).
+- Chỉ nhóm trưởng (hoặc người được ủy quyền) mới được **merge vào develop** sau khi review OK.
+- Khi tất cả tính năng đã hoàn thiện, test OK → **merge `develop` → `main`**.
 
 ---
 
-## ✅ Phân công công việc
+## 6. Quy tắc đồng bộ để tránh xung đột
 
-- **A**: Tiền xử lý dữ liệu.
-- **B**: Thống kê mô tả & EDA.
-- **C**: Trực quan hóa dữ liệu.
-- **D**: Mô hình học máy.
-- **E**: Báo cáo & slide thuyết trình.
+1. **Luôn cập nhật develop trước khi code:**
+
+   ```bash
+   git checkout develop
+   git pull origin develop
+   git checkout feature/<branch>
+   git merge develop
+   ```
+
+   → Giải quyết xung đột (nếu có) tại nhánh cá nhân, không để xung đột khi merge develop.
+
+2. **Không commit trực tiếp lên develop hay main.**
+
+3. **Mỗi commit/push nhỏ gọn**, không gom quá nhiều thay đổi vào một commit.
+
+4. **Đặt tên file/thư mục rõ ràng**, tránh trùng lặp.
+
+5. **Thành viên bận** → phải báo cho trưởng nhóm để điều chỉnh phân công.
+
+---
+
+## 7. Tips làm việc nhóm chuyên nghiệp
+
+- Họp Zoom định kỳ 3 lần/tuần (ngày 24, 27, 29/09, 20h00).
+- Check-in nhanh hàng ngày qua chat nhóm (22h00).
+- Luôn viết mô tả ngắn trong PR để người khác dễ review.
+- Nếu phát hiện lỗi sau khi merge → tạo nhánh `fix/<ten>` để sửa, tuyệt đối không sửa trực tiếp trên `develop`.
 
 ---
