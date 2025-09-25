@@ -11,6 +11,35 @@ Mục tiêu chính:
 - Xây dựng một quy trình làm việc nhóm hiệu quả, tuân thủ các chuẩn mực của ngành.
 
 ---
+## 📂 Cấu trúc thư mục dự án
+
+```text
+sleep-health-checker/
+├── data/                         # Chứa dữ liệu
+│   ├── raw/                      # Dữ liệu gốc do thầy cung cấp
+│   │   └── Sleep_health_and_lifestyle_dataset.csv
+│   ├── processed/                # Dữ liệu sau khi tiền xử lý
+│   │   └── sleep_data_clean.csv
+│   └── external/                 # (Nếu có) dữ liệu bổ sung từ nguồn ngoài
+│
+├── notebooks/                    # Thống kê dữ liệu
+│   └── 01_data_overview.Rmd      # Tổng quan dữ liệu, summary ban đầu
+│
+├── reports/                      # Báo cáo cuối cùng và slide thuyết trình
+│
+├── src/                          # Code xử lý và phân tích
+│   ├── preprocessing/            # Tiền xử lý dữ liệu
+│   │   └── clean_data.R
+│   ├── analysis/                 # Phân tích mối liên hệ giữa các biến
+│   │   └── correlation_analysis.py
+│   ├── visualization/            # Trực quan hóa dữ liệu
+│   │   ├── plot_boxplot.R
+│   │   ├── plot_heatmap_correlation.R
+│   │   └── plot_sleep_duration.R
+│   ├── modeling/                 # Chủ đề nâng cao (machine learning / clustering)
+│   └── model_testing/            # Đánh giá mô hình nâng cao
+│
+└── README.md                     # Hướng dẫn dự án
 
 ## 🌳 Cấu trúc nhánh Git
 
