@@ -112,7 +112,7 @@ git commit -m "feat: Thêm biểu đồ histogram cho Sleep Duration"
 ```bash
 # Push nhánh cá nhân của bạn lên repository
 #Ví dụ:
-git push origin feature/dat-trucquanhoa
+git push origin <name>-<nhiemvu>
 ```
 
 ### 5️⃣ Bước 5: Tạo Pull Request (PR) để review code
