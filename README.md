@@ -11,6 +11,7 @@ Mục tiêu chính:
 - Xây dựng một quy trình làm việc nhóm hiệu quả, tuân thủ các chuẩn mực của ngành.
 
 ---
+
 ## 📂 Cấu trúc thư mục dự án
 
 ```text
@@ -41,6 +42,7 @@ sleep-health-checker/
 │
 └── README.md                     # Hướng dẫn dự án
 ```
+
 ## 🌳 Cấu trúc nhánh Git
 
 Chúng ta sẽ tuân thủ mô hình **Git Flow đơn giản** để quản lý source code một cách hiệu quả:
@@ -52,10 +54,10 @@ Chúng ta sẽ tuân thủ mô hình **Git Flow đơn giản** để quản lý 
 ```mermaid
 graph TD;
     A[main] --> B[develop];
-    B --> C[feature/A-lamsachdulieu];
-    B --> G[feature/B-lamsachdulieu];
-    B --> D[feature/C-trucquanhoa];
-    B --> E[feature/D-thongke];
+    B --> C[A-lamsachdulieu];
+    B --> G[B-lamsachdulieu];
+    B --> D[C-trucquanhoa];
+    B --> E[D-thongke];
 ```
 
 ---
@@ -83,7 +85,9 @@ git pull origin develop
 # Tạo và chuyển sang nhánh cá nhân
 # Cú pháp: feature/<ten-thanh-vien>-<nhiem-vu>
 #Ví dụ:
-git checkout -b feature/dat-trucquanhoa
+git checkout -b <name>-<nhiemvu>
+git pull origin develop
+git push origin <name>-<nhiemvu>
 ```
 
 ### 3️⃣ Bước 3: Làm việc và Commit
